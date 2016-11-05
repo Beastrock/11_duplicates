@@ -21,6 +21,9 @@ def get_duplicates_dictionary_list(*paths):
 
 
 def print_duplicates(duplicates_dictionary_list):
+    if not duplicates_dictionary_list:
+        print("There are not any duplicates")
+        return
     for duplicates_dictionary in duplicates_dictionary_list:
         for name, paths in duplicates_dictionary.items():
             print("Duplicates of {} have been found in directories:"
