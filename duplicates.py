@@ -2,7 +2,12 @@ import os
 
 
 def get_duplicates_list(*paths):
-    files = []  # the list structure is [file_path, (file_name, size), ...]
+    """ The files list structure is [file_path, (file_name, size), ...]
+    dupl_path - path of the first from two duplicates, which
+    is already in list. Named shortly for str length < 79.
+    file_path in if block - path of the second from two duplicates.
+    """
+    files = []
     no_duplicates_in_folder = True
     for path in paths:
         for folder_name, sub_folders, file_names in os.walk(path):
@@ -11,9 +16,6 @@ def get_duplicates_list(*paths):
                 file_size = os.path.getsize(file_path)
                 if (file_name, file_size) in files:
                     no_duplicates_in_folder = False
-                    # dupl_path - path of the first from two duplicates, which
-                    # is already in list. Named shortly for str length < 79.
-                    # file_path in if - path of the second from two duplicates
                     dupl_path = files[files.index((file_name, file_size)) - 1]
                     yield {file_name: (file_path, dupl_path)}
                 files.append(file_path)
