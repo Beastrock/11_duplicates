@@ -12,7 +12,7 @@ def get_duplicates_dictionary_list(*paths):
                 if (file_name, file_size) in files:
                     '''
                     dupl_path - path of the first from two duplicates,is named
-                     like this because of the short recommended string length
+                    like this because of the short recommended string length
                     '''
                     dupl_path = files[files.index((file_name, file_size)) - 1]
                     yield {file_name: (file_path, dupl_path)}
