@@ -32,5 +32,5 @@ def print_duplicates(duplicates_dictionary_list):
 
 
 if __name__ == "__main__":
-    duplicates_dictionary_list = get_duplicates_dictionary_list(sys.argv[1:])
+    duplicates_dictionary_list = get_duplicates_dictionary_list(sys.argv[2:])
     print_duplicates(duplicates_dictionary_list)
