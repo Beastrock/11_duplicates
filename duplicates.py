@@ -2,7 +2,7 @@ import os
 
 
 def get_duplicates_dictionaries_list(*paths):
-    files = []  # the list structure is [file_path,(file_name,size), ...]
+    files = []  # the list structure is [file_path, (file_name, size), ...]
     duplicates_in_folder = False
     for path in paths:
         for folder_name, sub_folders, file_names in os.walk(path):
