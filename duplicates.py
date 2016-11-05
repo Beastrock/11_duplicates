@@ -11,8 +11,8 @@ def get_duplicates_dictionary_list(*paths):
                 file_size = os.path.getsize(file_path)
                 if (file_name, file_size) in files:
                     '''
-                    dupl_path - the first of two duplicates path, named like
-                    this because of the short pep8 recommended string length
+                    dupl_path - path of the first from two duplicates,is named
+                     like this because of the short recommended string length
                     '''
                     dupl_path = files[files.index((file_name, file_size)) - 1]
                     yield {file_name: (file_path, dupl_path)}
