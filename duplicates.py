@@ -2,7 +2,8 @@ import os
 
 
 def get_duplicates_list(*paths):
-    """ The files list structure is [file_path, (file_name, size), ...]
+    """
+    The files list structure is [file_path, (file_name, size), ...]
     dupl_path - path of the first from two duplicates, which is already
     in list. Named shortly because of pep8 string length < 79 symb.
     file_path in if block - path of the second from two duplicates.
