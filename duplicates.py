@@ -41,6 +41,6 @@ def print_duplicates(duplicates_list):
 if __name__ == "__main__":
     folder_path = input("Input desired folder path:\n")
     optional_folder_path = input(
-        "Input another folder path or type enter to continue:\n")
+        "Input another folder path or press ENTER to continue:\n")
     duplicates_list = get_duplicates_list(folder_path, optional_folder_path)
     print_duplicates(duplicates_list)
