@@ -11,10 +11,7 @@ def get_duplicates(*paths):
                 file_name_and_size = "{}:{}".format(file_name, file_size)
                 files_info.setdefault(file_name_and_size, [])
                 files_info[file_name_and_size].append(file_path)
-    if not [value for value in files_info.values() if len(value) > 1]:
-        return None
-    else:
-        return {key: value for key, value in files_info.items() if len(value) > 1}
+    return {key: value for key, value in files_info.items() if len(value) > 1}
 
 
 def print_duplicates(duplicates):
